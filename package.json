@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "node ./src/__tests__/eslint.ts",
+    "test:e2e": "node ./src/__tests__/e2e.test.ts",
+    "type:check": "node ./src/__tests__/typecheck.ts",
     "preview": "vite preview"
   },
   "dependencies": {
