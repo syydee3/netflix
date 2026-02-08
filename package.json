@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "lint": "node ./src/__tests__/eslint.ts",
     "test:e2e": "node ./src/__tests__/e2e.test.ts",
     "type:check": "node ./src/__tests__/typecheck.ts",
