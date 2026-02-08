@@ -32,8 +32,18 @@ jobs:
       
       - name: Build with Vite
         run: npm run build
-        env:
-          VITE_BASE_URL: '/'
+      
+      # Проверяем, что картинки скопировались
+      - name: Verify public files are copied
+        run: |
+          echo "Checking dist folder contents:"
+          ls -la ./dist/
+          echo "Checking for images:"
+          ls -la ./dist/*.png 2>/dev/null || echo "PNG files not in root"
+          find ./dist -name "*.png" | head -10
+      
+      - name: Create .nojekyll file
+        run: echo "" > dist/.nojekyll
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
