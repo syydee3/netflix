@@ -30,7 +30,7 @@ export function Header() {
         <header className='flex items-center justify-between px-6 py-4.5'>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-white/30 to-transparent"></div>
             <Link to={'/'}>
-                <img src='/netflix.png' alt='Netflix' className='h-8 w-auto'/>
+                <img src='./netflix.png' alt='Netflix' className='h-8 w-auto'/>
             </Link>
             <div className="flex items-center gap-25"> 
                 
@@ -73,7 +73,7 @@ export function Header() {
                     )}
 
                     <button>
-                        <img src="icons/notifications.svg" className="w-6 h-6"/>
+                        <img src="./icons/notifications.svg" className="w-6 h-6"/>
                     </button>
 
                     <button 

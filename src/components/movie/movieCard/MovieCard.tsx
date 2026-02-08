@@ -33,7 +33,7 @@ const MovieCard = ({ movie }: Props) => {
                     </div>
                 </Modal>}
 
-            <img src={movie.image} alt={movie.title} className='w-full h-full object-cover'/>
+            <img src={`./${movie.image}`} alt={movie.title} className='w-full h-full object-cover'/>
             <div className='absolute top-2 right-2 z-10'>
                 <FavouriteButton />
                 <Link to={`/movie/${movie.trailerYouTubeId}`}>

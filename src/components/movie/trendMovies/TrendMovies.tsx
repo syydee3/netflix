@@ -77,7 +77,7 @@ function TrendMovies({ movies }: Props) {
                 {previousMovie && isTransitioning && (
                     <div className="absolute top-0 left-0 w-full h-full z-0">
                         <img 
-                            src={previousMovie.imageForTrends} 
+                            src={`./${previousMovie.imageForTrends}`} 
                             className="w-full h-full object-cover"
                             alt=""
                         />
@@ -88,7 +88,7 @@ function TrendMovies({ movies }: Props) {
                 
                 <div className={`relative w-full h-full z-0 transition-opacity duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
                     <img 
-                        src={currentMovie.imageForTrends} 
+                        src={`./${currentMovie.imageForTrends}`} 
                         className="w-full h-full object-cover"
                         alt={currentMovie.title}
                     />
@@ -102,7 +102,7 @@ function TrendMovies({ movies }: Props) {
                         <p className="font-semibold transition-all duration-700 delay-100">Duration: {currentMovie.duration}</p>
                         <div className="flex gap-2 items-end transition-all duration-700 delay-150">
                             <div className="flex items-center gap-1">
-                                <img src="icons/star.svg" className="h-5 w-5" alt="Rating"/>
+                                <img src="./icons/star.svg" className="h-5 w-5" alt="Rating"/>
                                 <p className="text-2xl font-bold">{currentMovie.rating}</p>
                             </div>
                             
@@ -121,14 +121,14 @@ function TrendMovies({ movies }: Props) {
                                         transition-all duration-300 hover:scale-105"
                                 onClick={() => console.log('Watch:', currentMovie.title)}
                             >
-                                <img src="icons/play.svg" className="w-4 h-4" alt="Play" />
+                                <img src="./icons/play.svg" className="w-4 h-4" alt="Play" />
                                 <span className="font-bold">WATCH</span>
                             </button>
                             <button 
                                 className="bg-black px-9 py-3 gap-4 rounded-full font-bold flex items-center justify-center w-45 transition-all duration-300 hover:scale-105"
                                 onClick={() => console.log('Add to list:', currentMovie.title)}
                             >
-                                <img src="icons/plus.svg" className="w-4 h-4" alt="Add to list" />
+                                <img src="./icons/plus.svg" className="w-4 h-4" alt="Add to list" />
                                 <span>ADD LIST</span>
                             </button>
                         </div>
