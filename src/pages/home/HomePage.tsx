@@ -21,7 +21,7 @@ export function HomePage() {
             <main>
                 {/* TrendMovies будет начинаться под хедером */}
                 <div className="-mt-20"> {/* Отрицательный margin чтобы подняться под хедер */}
-                    <TrendMovies movie={MOVIES[2]} />
+                    <TrendMovies movies={MOVIES} />
                 </div>
 
                 {/* Остальные фильмы с отступом */}
