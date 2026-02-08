@@ -6,21 +6,26 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 24.x ]
+        node-version: [24.x]
     steps:
       - uses: actions/checkout@v5
+      
       - name: Starting Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      
       - name: install modules
-      run: npm install
+        run: npm install
+      
       - name: build project
-      run: npm run build
+        run: npm run build
+      
       - name: lint code
-      run: npm run lint
+        run: npm run lint
+      
       - name: e2e test
-      run: npm run test:e2e
+        run: npm run test:e2e
+      
       - name: type check
-      run: npm run type:check
-
+        run: npm run type:check
