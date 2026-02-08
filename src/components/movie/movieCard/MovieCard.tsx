@@ -17,7 +17,7 @@ const MovieCard = ({ movie }: Props) => {
     }, [])
 
     return (
-        <div className='relative w-50 rounded-2xl overflow-hidden bg-neutral-900 shadow-lg cursor-pointer' onClick={openTrailer}>
+        <div className='relative w-50 rounded-2xl overflow-hidden bg-neutral-900 shadow-lg cursor-pointer aspect-2/3' onClick={openTrailer}>
 
             {isOpenTrailer && <Modal onClose={() => {setisOpenTrailer(false)}}>
                     <div className='flex flex-col items-center gap-5'>
@@ -33,7 +33,7 @@ const MovieCard = ({ movie }: Props) => {
                     </div>
                 </Modal>}
 
-            <img src={movie.image} alt={movie.title} className='w-full h-auto object-cover'/>
+            <img src={movie.image} alt={movie.title} className='w-full h-full object-cover'/>
             <div className='absolute top-2 right-2 z-10'>
                 <FavouriteButton />
                 <Link to={`/movie/${movie.trailerYouTubeId}`}>

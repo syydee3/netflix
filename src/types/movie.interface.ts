@@ -3,6 +3,8 @@ export interface IMovie {
     image: string,
     imageForTrends: string,
     rating: number,
+    recommend: boolean,
+    type: string,
     trailerYouTubeId: string,
     duration: string,
     tags: string[],

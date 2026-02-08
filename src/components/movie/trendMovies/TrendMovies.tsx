@@ -1,11 +1,11 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, memo } from "react"
 import { IMovie } from "../../../types/movie.interface"
 
 interface Props { 
     movies: IMovie[]
 }
 
-export function TrendMovies({ movies }: Props) {
+function TrendMovies({ movies }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isTransitioning, setIsTransitioning] = useState(false)
     const currentIndexRef = useRef(0)
@@ -151,3 +151,5 @@ export function TrendMovies({ movies }: Props) {
         </div>
     )
 }
+
+export default memo(TrendMovies)
