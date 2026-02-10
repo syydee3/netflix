@@ -9,7 +9,7 @@ import { MyListPage } from '../pages/myList/MyListPage'
 
 export function MainRoutes() {
     return (
-        <Router basename='/netflix'>
+        <Router basename='/netflix/'>
             <Routes>
                 <Route element={<Layout />}>
                     <Route path='/' element={<HomePage />}/>

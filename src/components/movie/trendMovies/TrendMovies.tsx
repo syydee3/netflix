@@ -91,6 +91,8 @@ function TrendMovies({ movies }: Props) {
                         src={`./${currentMovie.imageForTrends}`} 
                         className="w-full h-full object-cover"
                         alt={currentMovie.title}
+                        loading="lazy"
+                        decoding="async"
                     />
                     
                     <div className="absolute inset-0 bg-black/20 z-5"></div>
