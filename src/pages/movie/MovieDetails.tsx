@@ -21,7 +21,7 @@ export function MovieDetails() {
 
     return <div>
             <div className="flex flex-col md:flex-row gap-10 items-start">
-                <img src={`./${movie.image}`} alt={movie.title} className='w-2/3 md:w-1/5 rounded-xl shadow-lg object-cover'/>
+                <img src={`./${movie.image}`} alt={movie.title} className='w-2/3 md:w-1/5 rounded-xl shadow-lg object-cover' loading="lazy" decoding="async"/>
                 <div className="flex-1 space-y-4">
                     <h1 className="text-4xl font-bold">{movie.title}</h1>
                     <p className="text-sm text-gray-600 dark:text-gray-400">IMDb: {movie.rating}</p>

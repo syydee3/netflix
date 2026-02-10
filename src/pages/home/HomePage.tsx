@@ -4,6 +4,7 @@ import { MOVIES } from '../../constants/movies.data';
 import { useDebounce } from '../../hooks/useDebounce';
 import { useSearchParams } from 'react-router-dom';
 import TrendMovies from '../../components/movie/trendMovies/TrendMovies';
+import { Tabs } from '../../components/tabs/Tabs';
 
 export function HomePage() {
     const [searchParams] = useSearchParams();
@@ -27,6 +28,10 @@ export function HomePage() {
             <main>
                 <div className="-mt-20"> 
                     <TrendMovies movies={getRandomThreeMovies} />
+                </div>
+
+                <div className='mt-8 px-6 py-5'>
+                    <Tabs />
                 </div>
                 
                 <div className='mt-8 px-6 py-5'>

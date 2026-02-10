@@ -2,11 +2,13 @@ import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../../hooks/useTheme";
 import { useSearchParams } from "react-router-dom";
 import { useMemo } from "react";
+import { useScrollDirection } from "../../../hooks/useScrollDirection";
 
 export function Header() {
     const { theme, toggleTheme } = useTheme();
     const [searchParams, setSearchParams] = useSearchParams();
     const { pathname } = useLocation();
+    const { isVisible } = useScrollDirection()
 
     const searchTerm = searchParams.get('q') || '';
 
@@ -27,7 +29,7 @@ export function Header() {
     };
 
     return (
-        <header className='flex items-center justify-between px-6 py-4.5'>
+        <header className={`flex items-center justify-between px-6 py-4.5 transition-all duration-500 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-white/30 to-transparent"></div>
             <Link to={'/'}>
                 <img src='./netflix.png' alt='Netflix' className='h-8 w-auto'/>
