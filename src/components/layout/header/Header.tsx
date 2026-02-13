@@ -3,6 +3,7 @@ import { useTheme } from "../../../hooks/useTheme";
 import { useSearchParams } from "react-router-dom";
 import { useMemo } from "react";
 import { useScrollDirection } from "../../../hooks/useScrollDirection";
+import Dot from "../../shared/Dot";
 
 export function Header() {
     const { theme, toggleTheme } = useTheme();
@@ -40,25 +41,25 @@ export function Header() {
                     <Link to={'/'} className="hover:text-gray-400 transition relative text-white block w-full text-center min-w-15">
                         Home
                         {isActive('/') && (
-                            <span className="absolute -bottom-3.5 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-red-600 rounded-full"></span>
+                            <Dot />
                         )}
                     </Link>
                     <Link to={'/movies'} className="hover:text-gray-400 transition relative text-white block w-full text-center min-w-15">
                         Movies
                         {isActive('/movies') && (
-                            <span className="absolute -bottom-3.5 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-red-600 rounded-full"></span>
+                            <Dot />
                         )}
                     </Link>
                     <Link to={'/series'} className="hover:text-gray-400 transition relative text-white block w-full text-center min-w-15">
                         Series
                         {isActive('/series') && (
-                            <span className="absolute -bottom-3.5 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-red-600 rounded-full"></span>
+                            <Dot />
                         )}
                     </Link>
                     <Link to={'/my-list'} className="hover:text-gray-400 transition relative text-white block w-full text-center min-w-15">
                         My List
                         {isActive('/my-list') && (
-                            <span className="absolute -bottom-3.5 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-red-600 rounded-full"></span>
+                            <Dot />
                         )}
                     </Link>
                 </div>
