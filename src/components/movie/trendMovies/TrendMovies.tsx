@@ -129,7 +129,7 @@ function TrendMovies({ movies }: Props) {
                             </div>
                             
                             <p className="text-gray-200 text-xs sm:text-sm md:text-base">
-                                {currentMovie.tags.join(` | `)}
+                                {currentMovie.genre.join(` | `)}
                             </p>
                         </div>
                         <h2 className={`font-bold transition-all duration-700 delay-200 ${isTransitioning ? 'opacity-0 translate-y-2 sm:translate-y-3 md:translate-y-4' : 'opacity-100 translate-y-0'}

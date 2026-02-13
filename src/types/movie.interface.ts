@@ -5,9 +5,10 @@ export interface IMovie {
     rating: number,
     recommend: boolean,
     type: string,
+    tags: string[],
     trailerYouTubeId: string,
     duration: string,
-    tags: string[],
+    genre: string[],
     shortDescription: string
     description: string
 }
